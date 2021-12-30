@@ -11,6 +11,7 @@ const Explore = () => {
 
         });
     }, []);
+    
     return (
         <div>
             <section className="hero">
