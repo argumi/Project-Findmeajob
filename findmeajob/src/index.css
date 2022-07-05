@@ -232,6 +232,31 @@ nav li a:hover {
   width: 158px;
 }
 
+#register .button-area p,
+#sign-in .button-area p,
+#company-registration .button-area p {
+  margin-top: 1em;
+  margin-bottom: -.1em;
+}
+
+#register .button-area button,
+#sign-in .button-area button,
+#company-registration .button-area button {
+  background-color: white;
+  color: var(--primary-color);
+  width: auto;
+  height: auto;
+  font-size: 18px;
+}
+
+#register .button-area button:hover,
+#sign-in .button-area button:hover,
+#company-registration .button-area button:hover {
+  color: #0b1d40;
+  background: white;
+  cursor: pointer;
+}
+
 #register button,
 #sign-in button,
 #company-registration button {
@@ -267,9 +292,9 @@ nav li a:hover {
           box-shadow: 0.1em 0.1em 0.1em 0.1em rgba(0, 0, 0, 0.25);
   background-color: white;
   border: none;
-  border-radius: 15px;
+  border-radius: 2px;
   width: 401px;
-  height: 147px;
+  height: auto;
   padding: 0.4em;
 }
 
@@ -286,7 +311,7 @@ nav li a:hover {
   text-decoration: none;
   font-weight: bold;
   font-size: 20px;
-  margin-left: 1.2em;
+  margin-left: .7em;
   color: black;
   margin-top: 0.6em;
 }
@@ -305,12 +330,58 @@ nav li a:hover {
 #explore .post .post-description {
   display: block;
   text-align: left;
-  margin-top: 2em;
+  margin-top: 1em;
   margin-left: 1em;
+  margin-bottom: 2em;
+}
+
+#explore .post .post-description .pos {
+  font-size: 19px;
 }
 
 #explore .post .post-description p {
   margin-bottom: -0.9em;
+}
+
+#explore .post .post-description h3 {
+  margin-top: 3em;
+}
+
+#explore .post .post-description .job-desc {
+  margin-top: -2em;
+}
+
+#explore .post .post-description .job-desc p {
+  margin-top: -0.9em;
+}
+
+#explore .post .post-description .req {
+  margin-top: -2em;
+  margin-bottom: 3em;
+}
+
+#explore .post .post-description .req p {
+  margin-top: -0.9em;
+}
+
+#explore .post .button-area button {
+  margin-bottom: .5em;
+  background-color: var(--primary-color);
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  border-radius: 7px;
+  width: 100px;
+  height: 45px;
+  border: none;
+  text-decoration: none;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+#explore .post .button-area button:hover {
+  cursor: pointer;
+  background: #091f49;
 }
 
 #single-post .description {
@@ -607,11 +678,35 @@ nav li a:hover {
   text-align: left;
 }
 
-#profile .nav-section .profile-bar .current-1,
+.profiledata {
+  margin: auto;
+  display: block;
+  width: 400px;
+  background-color: white;
+  border-radius: 10px;
+  height: 140px;
+}
+
+.profiledata ul {
+  margin-top: -4em;
+  display: block;
+  text-align: center;
+}
+
+.profiledata ul .name {
+  padding-top: 10px;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.profiledata ul li {
+  margin-bottom: 1em;
+}
+
 #education .nav-section .profile-bar .current-1,
 #experience .nav-section .profile-bar .current-1,
 #change-password .nav-section .profile-bar .current-1,
-#application-status .nav-section .profile-bar .current-1,
+#profile .nav-section .profile-bar .current-1,
 #profile-company .nav-section .profile-bar .current-1,
 #change-password-company .nav-section .profile-bar .current-1,
 #job-posts .nav-section .profile-bar .current-1,
@@ -625,11 +720,10 @@ nav li a:hover {
   border-radius: 10px;
 }
 
-#profile .nav-section .profile-bar .current-2,
 #education .nav-section .profile-bar .current-2,
 #experience .nav-section .profile-bar .current-2,
 #change-password .nav-section .profile-bar .current-2,
-#application-status .nav-section .profile-bar .current-2,
+#profile .nav-section .profile-bar .current-2,
 #profile-company .nav-section .profile-bar .current-2,
 #change-password-company .nav-section .profile-bar .current-2,
 #job-posts .nav-section .profile-bar .current-2,
@@ -639,9 +733,6 @@ nav li a:hover {
   border: none;
 }
 
-#profile .data-section,
-#profile .profile-section,
-#profile .button-section,
 #education .data-section,
 #education .profile-section,
 #education .button-section,
@@ -651,9 +742,9 @@ nav li a:hover {
 #change-password .data-section,
 #change-password .profile-section,
 #change-password .button-section,
-#application-status .data-section,
-#application-status .profile-section,
-#application-status .button-section,
+#profile .data-section,
+#profile .profile-section,
+#profile .button-section,
 #profile-company .data-section,
 #profile-company .profile-section,
 #profile-company .button-section,
@@ -685,9 +776,6 @@ nav li a:hover {
   padding: 1.2em;
 }
 
-#profile .data-section h1,
-#profile .profile-section h1,
-#profile .button-section h1,
 #education .data-section h1,
 #education .profile-section h1,
 #education .button-section h1,
@@ -697,9 +785,9 @@ nav li a:hover {
 #change-password .data-section h1,
 #change-password .profile-section h1,
 #change-password .button-section h1,
-#application-status .data-section h1,
-#application-status .profile-section h1,
-#application-status .button-section h1,
+#profile .data-section h1,
+#profile .profile-section h1,
+#profile .button-section h1,
 #profile-company .data-section h1,
 #profile-company .profile-section h1,
 #profile-company .button-section h1,
@@ -722,12 +810,6 @@ nav li a:hover {
   font-size: 20px;
 }
 
-#profile .data-section label,
-#profile .data-section input,
-#profile .profile-section label,
-#profile .profile-section input,
-#profile .button-section label,
-#profile .button-section input,
 #education .data-section label,
 #education .data-section input,
 #education .profile-section label,
@@ -746,12 +828,12 @@ nav li a:hover {
 #change-password .profile-section input,
 #change-password .button-section label,
 #change-password .button-section input,
-#application-status .data-section label,
-#application-status .data-section input,
-#application-status .profile-section label,
-#application-status .profile-section input,
-#application-status .button-section label,
-#application-status .button-section input,
+#profile .data-section label,
+#profile .data-section input,
+#profile .profile-section label,
+#profile .profile-section input,
+#profile .button-section label,
+#profile .button-section input,
 #profile-company .data-section label,
 #profile-company .data-section input,
 #profile-company .profile-section label,
@@ -794,9 +876,6 @@ nav li a:hover {
           justify-content: center;
 }
 
-#profile .data-section label,
-#profile .profile-section label,
-#profile .button-section label,
 #education .data-section label,
 #education .profile-section label,
 #education .button-section label,
@@ -806,9 +885,9 @@ nav li a:hover {
 #change-password .data-section label,
 #change-password .profile-section label,
 #change-password .button-section label,
-#application-status .data-section label,
-#application-status .profile-section label,
-#application-status .button-section label,
+#profile .data-section label,
+#profile .profile-section label,
+#profile .button-section label,
 #profile-company .data-section label,
 #profile-company .profile-section label,
 #profile-company .button-section label,
@@ -830,9 +909,6 @@ nav li a:hover {
   font-size: 15px;
 }
 
-#profile .data-section input,
-#profile .profile-section input,
-#profile .button-section input,
 #education .data-section input,
 #education .profile-section input,
 #education .button-section input,
@@ -842,9 +918,9 @@ nav li a:hover {
 #change-password .data-section input,
 #change-password .profile-section input,
 #change-password .button-section input,
-#application-status .data-section input,
-#application-status .profile-section input,
-#application-status .button-section input,
+#profile .data-section input,
+#profile .profile-section input,
+#profile .button-section input,
 #profile-company .data-section input,
 #profile-company .profile-section input,
 #profile-company .button-section input,
@@ -870,9 +946,6 @@ nav li a:hover {
   width: 190px;
 }
 
-#profile .data-section .form-group-g,
-#profile .profile-section .form-group-g,
-#profile .button-section .form-group-g,
 #education .data-section .form-group-g,
 #education .profile-section .form-group-g,
 #education .button-section .form-group-g,
@@ -882,9 +955,9 @@ nav li a:hover {
 #change-password .data-section .form-group-g,
 #change-password .profile-section .form-group-g,
 #change-password .button-section .form-group-g,
-#application-status .data-section .form-group-g,
-#application-status .profile-section .form-group-g,
-#application-status .button-section .form-group-g,
+#profile .data-section .form-group-g,
+#profile .profile-section .form-group-g,
+#profile .button-section .form-group-g,
 #profile-company .data-section .form-group-g,
 #profile-company .profile-section .form-group-g,
 #profile-company .button-section .form-group-g,
@@ -911,9 +984,6 @@ nav li a:hover {
   padding-right: 40px;
 }
 
-#profile .data-section .form-group-g label,
-#profile .profile-section .form-group-g label,
-#profile .button-section .form-group-g label,
 #education .data-section .form-group-g label,
 #education .profile-section .form-group-g label,
 #education .button-section .form-group-g label,
@@ -923,9 +993,9 @@ nav li a:hover {
 #change-password .data-section .form-group-g label,
 #change-password .profile-section .form-group-g label,
 #change-password .button-section .form-group-g label,
-#application-status .data-section .form-group-g label,
-#application-status .profile-section .form-group-g label,
-#application-status .button-section .form-group-g label,
+#profile .data-section .form-group-g label,
+#profile .profile-section .form-group-g label,
+#profile .button-section .form-group-g label,
 #profile-company .data-section .form-group-g label,
 #profile-company .profile-section .form-group-g label,
 #profile-company .button-section .form-group-g label,
@@ -948,9 +1018,6 @@ nav li a:hover {
   margin-left: 20px;
 }
 
-#profile .data-section .form-group-g input,
-#profile .profile-section .form-group-g input,
-#profile .button-section .form-group-g input,
 #education .data-section .form-group-g input,
 #education .profile-section .form-group-g input,
 #education .button-section .form-group-g input,
@@ -960,9 +1027,9 @@ nav li a:hover {
 #change-password .data-section .form-group-g input,
 #change-password .profile-section .form-group-g input,
 #change-password .button-section .form-group-g input,
-#application-status .data-section .form-group-g input,
-#application-status .profile-section .form-group-g input,
-#application-status .button-section .form-group-g input,
+#profile .data-section .form-group-g input,
+#profile .profile-section .form-group-g input,
+#profile .button-section .form-group-g input,
 #profile-company .data-section .form-group-g input,
 #profile-company .profile-section .form-group-g input,
 #profile-company .button-section .form-group-g input,
@@ -984,9 +1051,6 @@ nav li a:hover {
   margin-right: -3em;
 }
 
-#profile .data-section textarea,
-#profile .profile-section textarea,
-#profile .button-section textarea,
 #education .data-section textarea,
 #education .profile-section textarea,
 #education .button-section textarea,
@@ -996,9 +1060,9 @@ nav li a:hover {
 #change-password .data-section textarea,
 #change-password .profile-section textarea,
 #change-password .button-section textarea,
-#application-status .data-section textarea,
-#application-status .profile-section textarea,
-#application-status .button-section textarea,
+#profile .data-section textarea,
+#profile .profile-section textarea,
+#profile .button-section textarea,
 #profile-company .data-section textarea,
 #profile-company .profile-section textarea,
 #profile-company .button-section textarea,
@@ -1023,9 +1087,6 @@ nav li a:hover {
   width: 190px;
 }
 
-#profile .data-section button,
-#profile .profile-section button,
-#profile .button-section button,
 #education .data-section button,
 #education .profile-section button,
 #education .button-section button,
@@ -1035,9 +1096,9 @@ nav li a:hover {
 #change-password .data-section button,
 #change-password .profile-section button,
 #change-password .button-section button,
-#application-status .data-section button,
-#application-status .profile-section button,
-#application-status .button-section button,
+#profile .data-section button,
+#profile .profile-section button,
+#profile .button-section button,
 #profile-company .data-section button,
 #profile-company .profile-section button,
 #profile-company .button-section button,
@@ -1068,9 +1129,6 @@ nav li a:hover {
   margin-bottom: -0.1em;
 }
 
-#profile .data-section button:hover,
-#profile .profile-section button:hover,
-#profile .button-section button:hover,
 #education .data-section button:hover,
 #education .profile-section button:hover,
 #education .button-section button:hover,
@@ -1080,9 +1138,9 @@ nav li a:hover {
 #change-password .data-section button:hover,
 #change-password .profile-section button:hover,
 #change-password .button-section button:hover,
-#application-status .data-section button:hover,
-#application-status .profile-section button:hover,
-#application-status .button-section button:hover,
+#profile .data-section button:hover,
+#profile .profile-section button:hover,
+#profile .button-section button:hover,
 #profile-company .data-section button:hover,
 #profile-company .profile-section button:hover,
 #profile-company .button-section button:hover,
@@ -1105,9 +1163,6 @@ nav li a:hover {
   cursor: pointer;
 }
 
-#profile .data-section #change-pass,
-#profile .profile-section #change-pass,
-#profile .button-section #change-pass,
 #education .data-section #change-pass,
 #education .profile-section #change-pass,
 #education .button-section #change-pass,
@@ -1117,9 +1172,9 @@ nav li a:hover {
 #change-password .data-section #change-pass,
 #change-password .profile-section #change-pass,
 #change-password .button-section #change-pass,
-#application-status .data-section #change-pass,
-#application-status .profile-section #change-pass,
-#application-status .button-section #change-pass,
+#profile .data-section #change-pass,
+#profile .profile-section #change-pass,
+#profile .button-section #change-pass,
 #profile-company .data-section #change-pass,
 #profile-company .profile-section #change-pass,
 #profile-company .button-section #change-pass,
@@ -1141,8 +1196,41 @@ nav li a:hover {
   width: 165px;
 }
 
-#application-status .status,
-#application-status .applicant,
+#profile .profile,
+#job-posts .profile,
+#applicants-list .profile {
+  margin: auto;
+  display: block;
+  width: 400px;
+  background-color: white;
+  border-radius: 10px;
+  height: 140px;
+}
+
+#profile .profile ul,
+#job-posts .profile ul,
+#applicants-list .profile ul {
+  margin-top: -4em;
+  display: block;
+  text-align: center;
+}
+
+#profile .profile ul .name,
+#job-posts .profile ul .name,
+#applicants-list .profile ul .name {
+  padding-top: 10px;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+#profile .profile ul li,
+#job-posts .profile ul li,
+#applicants-list .profile ul li {
+  margin-bottom: 1em;
+}
+
+#profile .status,
+#profile .applicant,
 #job-posts .status,
 #job-posts .applicant,
 #applicants-list .status,
@@ -1213,16 +1301,16 @@ nav li a:hover {
   display: none;
 }
 
-#application-status .nav-section .profile-bar .current-1,
-#application-status .nav-section .profile-bar .current-2,
-#application-status .nav-section .profile-bar .current-3,
-#application-status .nav-section .profile-bar .current-4 {
+#profile .nav-section .profile-bar .current-1,
+#profile .nav-section .profile-bar .current-2,
+#profile .nav-section .profile-bar .current-3,
+#profile .nav-section .profile-bar .current-4 {
   border: none;
   background-color: white;
   color: black;
 }
 
-#application-status .nav-section .profile-bar .current-5 {
+#profile .nav-section .profile-bar .current-5 {
   border: 3px solid black;
   background-color: black;
   color: white;
@@ -1230,8 +1318,8 @@ nav li a:hover {
   border-radius: 10px;
 }
 
-#application-status .data-section .status .top-section,
-#application-status .data-section .applicant .top-section,
+#profile .data-section .status .top-section,
+#profile .data-section .applicant .top-section,
 #job-posts .data-section .status .top-section,
 #job-posts .data-section .applicant .top-section,
 #applicants-list .data-section .status .top-section,
@@ -1248,8 +1336,8 @@ nav li a:hover {
   margin-bottom: -0.5em;
 }
 
-#application-status .data-section .status .middle-section,
-#application-status .data-section .applicant .middle-section,
+#profile .data-section .status .middle-section,
+#profile .data-section .applicant .middle-section,
 #job-posts .data-section .status .middle-section,
 #job-posts .data-section .applicant .middle-section,
 #applicants-list .data-section .status .middle-section,
@@ -1259,8 +1347,8 @@ nav li a:hover {
   padding: 0px 19px 0px;
 }
 
-#application-status .data-section .status .middle-section p,
-#application-status .data-section .applicant .middle-section p,
+#profile .data-section .status .middle-section p,
+#profile .data-section .applicant .middle-section p,
 #job-posts .data-section .status .middle-section p,
 #job-posts .data-section .applicant .middle-section p,
 #applicants-list .data-section .status .middle-section p,
@@ -1268,10 +1356,10 @@ nav li a:hover {
   margin: -0.1em;
 }
 
-#application-status .data-section .status .bottom-section p,
-#application-status .data-section .status .bottom-section a,
-#application-status .data-section .applicant .bottom-section p,
-#application-status .data-section .applicant .bottom-section a,
+#profile .data-section .status .bottom-section p,
+#profile .data-section .status .bottom-section a,
+#profile .data-section .applicant .bottom-section p,
+#profile .data-section .applicant .bottom-section a,
 #job-posts .data-section .status .bottom-section p,
 #job-posts .data-section .status .bottom-section a,
 #job-posts .data-section .applicant .bottom-section p,
@@ -1297,8 +1385,8 @@ nav li a:hover {
   border: none;
 }
 
-#application-status .data-section .status .bottom-section .pending,
-#application-status .data-section .applicant .bottom-section .pending,
+#profile .data-section .status .bottom-section .pending,
+#profile .data-section .applicant .bottom-section .pending,
 #job-posts .data-section .status .bottom-section .pending,
 #job-posts .data-section .applicant .bottom-section .pending,
 #applicants-list .data-section .status .bottom-section .pending,
@@ -1306,8 +1394,8 @@ nav li a:hover {
   background-color: black;
 }
 
-#application-status .data-section .status .bottom-section .interview,
-#application-status .data-section .applicant .bottom-section .interview,
+#profile .data-section .status .bottom-section .interview,
+#profile .data-section .applicant .bottom-section .interview,
 #job-posts .data-section .status .bottom-section .interview,
 #job-posts .data-section .applicant .bottom-section .interview,
 #applicants-list .data-section .status .bottom-section .interview,
@@ -1315,8 +1403,8 @@ nav li a:hover {
   background-color: var(--primary-color);
 }
 
-#application-status .data-section .status .bottom-section .accepted,
-#application-status .data-section .applicant .bottom-section .accepted,
+#profile .data-section .status .bottom-section .accepted,
+#profile .data-section .applicant .bottom-section .accepted,
 #job-posts .data-section .status .bottom-section .accepted,
 #job-posts .data-section .applicant .bottom-section .accepted,
 #applicants-list .data-section .status .bottom-section .accepted,
@@ -1324,8 +1412,8 @@ nav li a:hover {
   background-color: #1f9f34;
 }
 
-#application-status .data-section .status .bottom-section .rejected,
-#application-status .data-section .applicant .bottom-section .rejected,
+#profile .data-section .status .bottom-section .rejected,
+#profile .data-section .applicant .bottom-section .rejected,
 #job-posts .data-section .status .bottom-section .rejected,
 #job-posts .data-section .applicant .bottom-section .rejected,
 #applicants-list .data-section .status .bottom-section .rejected,
@@ -1576,6 +1664,40 @@ nav li a:hover {
     padding: 1em;
     margin-top: 1.7em;
   }
+  .navbar nav button {
+    position: relative;
+    margin-left: auto;
+    margin-right: 3em;
+    border-top: 0.2em solid #eff1f4;
+    -webkit-box-shadow: 0.1em 0.1em 0.1em 0.1em rgba(0, 0, 0, 0.25);
+            box-shadow: 0.1em 0.1em 0.1em 0.1em rgba(0, 0, 0, 0.25);
+    height: 150px;
+    width: 230px;
+    border-radius: 15px;
+    margin-top: 0.6em;
+    padding-top: 1.5em;
+  }
+  .navbar nav .createpost {
+    color: white;
+    margin-top: -1.8em;
+    margin-left: 2em;
+    margin-right: 1em;
+    font-weight: bold;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    padding: 0;
+    border: none;
+    background: none;
+    border-radius: 200px;
+    width: auto;
+    height: auto;
+    font-size: 18px;
+  }
+  .navbar nav .createpost:hover {
+    color: #0b1d40;
+    background: #3b52c6;
+    cursor: pointer;
+  }
   .navbar nav ul {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1605,6 +1727,27 @@ nav li a:hover {
   }
   .navbar nav li.company a:hover {
     background-color: #127c24;
+  }
+  .navbar nav ul button {
+    margin-top: -1.8em;
+    margin-left: 2em;
+    margin-right: 1em;
+    font-weight: bold;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    padding: 0;
+    border: none;
+    background: none;
+    background-color: white;
+    color: black(--primary-color);
+    width: auto;
+    height: auto;
+    font-size: 18px;
+  }
+  .navbar nav ul button:hover {
+    color: #0b1d40;
+    background: white;
+    cursor: pointer;
   }
   #register,
   #sign-in,
@@ -1783,14 +1926,13 @@ nav li a:hover {
   #education .data-section,
   #experience .data-section,
   #change-password .data-section,
-  #application-status .data-section,
+  #profile .data-section,
   #profile-company .data-section,
   #change-password-company .data-section,
   #job-posts .data-section,
   #create-post .data-section {
     position: absolute;
     right: 0;
-    top: 6em;
     left: 18em;
     width: 500px;
     height: auto;
@@ -1799,7 +1941,7 @@ nav li a:hover {
   #education .data-section label,
   #experience .data-section label,
   #change-password .data-section label,
-  #application-status .data-section label,
+  #profile .data-section label,
   #profile-company .data-section label,
   #change-password-company .data-section label,
   #job-posts .data-section label,
@@ -1816,7 +1958,7 @@ nav li a:hover {
   #education .data-section input,
   #experience .data-section input,
   #change-password .data-section input,
-  #application-status .data-section input,
+  #profile .data-section input,
   #profile-company .data-section input,
   #change-password-company .data-section input,
   #job-posts .data-section input,
@@ -1829,7 +1971,7 @@ nav li a:hover {
   #education .data-section textarea,
   #experience .data-section textarea,
   #change-password .data-section textarea,
-  #application-status .data-section textarea,
+  #profile .data-section textarea,
   #profile-company .data-section textarea,
   #change-password-company .data-section textarea,
   #job-posts .data-section textarea,
@@ -1840,7 +1982,7 @@ nav li a:hover {
   #education .data-section .form-group-g,
   #experience .data-section .form-group-g,
   #change-password .data-section .form-group-g,
-  #application-status .data-section .form-group-g,
+  #profile .data-section .form-group-g,
   #profile-company .data-section .form-group-g,
   #change-password-company .data-section .form-group-g,
   #job-posts .data-section .form-group-g,
@@ -1852,7 +1994,7 @@ nav li a:hover {
   #education .data-section .form-group-g input,
   #experience .data-section .form-group-g input,
   #change-password .data-section .form-group-g input,
-  #application-status .data-section .form-group-g input,
+  #profile .data-section .form-group-g input,
   #profile-company .data-section .form-group-g input,
   #change-password-company .data-section .form-group-g input,
   #job-posts .data-section .form-group-g input,
@@ -1901,6 +2043,9 @@ nav li a:hover {
   }
   #create-post .data-section input[type="submit"] {
     margin-top: -0.3em;
+  }
+  #profile {
+    margin-top: 1em;
   }
 }
 
@@ -1953,13 +2098,13 @@ nav li a:hover {
   #explore {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (1fr)[3];
-        grid-template-columns: repeat(3, 1fr);
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
   }
   #explore .post {
     border: 3px solid #eff1f4;
-    width: 311px;
-    height: 150px;
+    width: 1000px;
+    height: auto;
     padding: 0.4em;
   }
   #explore .post .post-header a {
@@ -1974,6 +2119,20 @@ nav li a:hover {
   }
   #explore .post .post-description p {
     margin-bottom: -0.7em;
+  }
+  #explore .post .post-description .pos {
+    margin-top: -1.5em;
+    margin-bottom: 3.5em;
+  }
+  #explore .post .button-area button {
+    margin-bottom: .7em;
+    margin-right: 1em;
+    float: right;
+    border-radius: 5px;
+  }
+  #explore .post .button-area button:hover {
+    cursor: pointer;
+    background: #091f49;
   }
   #apply {
     width: 650px;
@@ -2074,6 +2233,25 @@ nav li a:hover {
     margin-right: auto;
     -ms-grid-columns: 230px 230px;
         grid-template-columns: 230px 230px;
+  }
+  #profile {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+  #profile .profiledata {
+    padding-top: 50px;
+    margin-top: -5em;
+    margin-left: -1em;
+  }
+  #profile .profiledata .name {
+    margin-top: 1em;
+  }
+  #profile .data-section {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -2em;
   }
 }
 

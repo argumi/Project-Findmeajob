@@ -182,6 +182,24 @@ nav {
         margin-bottom: 0.5em;
         width: 158px;
     }
+    .button-area{
+        p{
+            margin-top: 1em;
+            margin-bottom: -.1em;
+        }
+        button{
+            background-color: white;
+            color: var(--primary-color);
+            width: auto;
+            height: auto;
+            font-size: 18px;
+            &:hover {
+                color: #0b1d40;
+                background: white;
+                cursor: pointer;
+            }
+        }
+    }
     button {
         background-color: var(--primary-color);
         color: white;
@@ -209,9 +227,9 @@ nav {
         box-shadow: 0.1em 0.1em 0.1em 0.1em rgba(0, 0, 0, 0.25);
         background-color: white;
         border: none;
-        border-radius: 15px;
+        border-radius: 2px;
         width: 401px;
-        height: 147px;
+        height: auto;
         padding: 0.4em;
         .post-header {
             display: flex;
@@ -221,7 +239,7 @@ nav {
                 text-decoration: none;
                 font-weight: bold;
                 font-size: 20px;
-                margin-left: 1.2em;
+                margin-left: .7em;
                 color: black;
                 margin-top: 0.6em;
             }
@@ -238,10 +256,50 @@ nav {
         .post-description {
             display: block;
             text-align: left;
-            margin-top: 2em;
+            margin-top: 1em;
             margin-left: 1em;
+            margin-bottom : 2em;
+            .pos{
+                font-size: 19px;
+            }
             p {
                 margin-bottom: -0.9em;
+            }
+            h3{
+                margin-top: 3em;
+            }
+            .job-desc{
+                margin-top: -2em;
+                p{
+                    margin-top: -0.9em;
+                }
+            }
+            .req{
+                margin-top: -2em;
+                margin-bottom: 3em;
+                p{
+                    margin-top: -0.9em;
+                }
+            }
+        }
+        .button-area {
+            button {
+                margin-bottom: .5em;
+                background-color: var(--primary-color);
+                color: white;
+                font-weight: bold;
+                font-size: 18px;
+                border-radius: 7px;
+                width: 100px;
+                height: 45px;
+                border: none;
+                text-decoration: none;
+                margin-right: auto;
+                margin-left: auto;
+                &:hover {
+                    cursor: pointer;
+                    background: rgb(9, 31, 73);
+                }
             }
         }
     }
@@ -485,11 +543,34 @@ nav {
         }
     }
 }
-#profile,
+.profiledata{
+    margin: auto;
+    display: block;
+    width: 400px;
+    background-color: white;
+    border-radius: 10px;
+    height: 140px;
+    ul{
+        margin-top: -4em;
+        display: block;
+        text-align: center;
+        .name{
+            padding-top: 10px;
+            font-size: 2em;
+            font-weight: bold;
+        }
+        li{
+            margin-bottom: 1em;
+        }
+    }
+    
+}
+
+
 #education,
 #experience,
 #change-password,
-#application-status,
+#profile,
 #profile-company,
 #change-password-company,
 #job-posts,
@@ -582,9 +663,31 @@ nav {
         }
     }
 }
-#application-status,
+#profile,
 #job-posts,
 #applicants-list {
+    .profile{
+        margin: auto;
+        display: block;
+        width: 400px;
+        background-color: white;
+        border-radius: 10px;
+        height: 140px;
+        ul{
+            margin-top: -4em;
+            display: block;
+            text-align: center;
+            .name{
+                padding-top: 10px;
+                font-size: 2em;
+                font-weight: bold;
+            }
+            li{
+                margin-bottom: 1em;
+            }
+        }
+        
+    }
     .status,
     .applicant {
         border: 0.1em solid #eff1f4;
@@ -663,7 +766,7 @@ nav {
         }
     }
 }
-#application-status {
+#profile {
     .nav-section {
         .profile-bar {
             .current-1,
@@ -684,7 +787,7 @@ nav {
         }
     }
 }
-#application-status,
+#profile,
 #job-posts,
 #applicants-list {
     .data-section {
@@ -934,6 +1037,38 @@ nav {
         width: 100%;
         padding: 1em;
         margin-top: 1.7em;
+        button{
+            position: relative;
+                margin-left: auto;
+                margin-right: 3em;
+                border-top: 0.2em solid #eff1f4;
+                box-shadow: 0.1em 0.1em 0.1em 0.1em rgba(0, 0, 0, 0.25);
+                height: 150px;
+                width: 230px;
+                border-radius: 15px;
+                margin-top: 0.6em;
+                padding-top: 1.5em;
+        }
+        .createpost{
+            color: white;
+            margin-top: -1.8em;
+                margin-left: 2em;
+                margin-right: 1em;
+                font-weight: bold;
+                box-shadow: none;
+                padding: 0;
+                border: none;
+                background: none;       
+                border-radius: 200px;
+                width: auto;
+                height: auto;
+                font-size: 18px;
+                &:hover {
+                    color: #0b1d40;
+                    background: rgb(59, 82, 198);
+                    cursor: pointer;
+                }
+        }
         ul {
             display: flex;
         }
@@ -960,6 +1095,28 @@ nav {
             background: #1f9f34;
             &:hover {
                 background-color: #127c24;
+            }
+        }
+        ul{
+            button{
+                margin-top: -1.8em;
+                margin-left: 2em;
+                margin-right: 1em;
+                font-weight: bold;
+                box-shadow: none;
+                padding: 0;
+                border: none;
+                background: none;       
+                background-color: white;
+                color: black(--primary-color);
+                width: auto;
+                height: auto;
+                font-size: 18px;
+                &:hover {
+                    color: #0b1d40;
+                    background: white;
+                    cursor: pointer;
+                }
             }
         }
     }
@@ -1124,11 +1281,13 @@ nav {
         }
     }
 
+
+
     #profile,
     #education,
     #experience,
     #change-password,
-    #application-status,
+    #profile,
     #profile-company,
     #change-password-company,
     #job-posts,
@@ -1136,7 +1295,6 @@ nav {
         .data-section {
             position: absolute;
             right: 0;
-            top: 6em;
             left: 18em;
             width: 500px;
             height: auto;
@@ -1205,6 +1363,9 @@ nav {
             }
         }
     }
+    #profile{
+        margin-top: 1em;
+    }
 }
 @media only screen and(min-width:1080px) {
     .container {
@@ -1250,11 +1411,11 @@ nav {
     }
     #explore {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(1, 1fr);
         .post {
             border: 3px solid #eff1f4;
-            width: 311px;
-            height: 150px;
+            width: 1000px;
+            height: auto;
             padding: 0.4em;
             .post-header {
                 a {
@@ -1269,6 +1430,22 @@ nav {
                 margin-top: 2.7em;
                 p {
                     margin-bottom: -0.7em;
+                }
+                .pos{
+                    margin-top: -1.5em;
+                    margin-bottom: 3.5em;
+                }
+            }
+            .button-area {
+                button {
+                    margin-bottom: .7em;
+                    margin-right: 1em;
+                    float: right;
+                    &:hover {
+                        cursor: pointer;
+                        background: rgb(9, 31, 73);
+                    }
+                    border-radius: 5px;
                 }
             }
         }
@@ -1364,6 +1541,25 @@ nav {
                 margin-right: auto;
                 grid-template-columns: 230px 230px;
             }
+        }
+    }
+
+    #profile{
+        .profiledata{
+            padding-top: 50px;
+            margin-top: -5em;
+            margin-left: -1em;
+            .name{
+                margin-top: 1em;
+
+            }
+        }
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        .data-section{
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: -2em;
         }
     }
 }

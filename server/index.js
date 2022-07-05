@@ -39,21 +39,13 @@ const db = mysql.createConnection({
     database: "findmeajob",
 });
 
-/* app.get("/", (req, res) => {
-    const sqlInsert = "INSERT INTO usertest (full_name, email, password) VALUES ('anjing', 'anjing@gmail.com', 'anjing123'); "
-    db.query(sqlInsert, (err,res) =>{
-    })
-}); */
-
 app.post("/register", (req, res) => {
     const fullname = req.body.fullname;
     const email = req.body.email;
     const password = req.body.password;
-    const dob = req.body.dob;
-
     db.query(
-        "INSERT INTO user (full_name, email, password, dob) VALUES (?,?,?,?)",
-        [fullname, email, password, dob],
+        "INSERT INTO user (full_name, email, password) VALUES (?,?,?)",
+        [fullname, email, password],
         (err, result) => {
             console.log(err);
         }
@@ -75,6 +67,25 @@ app.post("/companyregister", (req, res) => {
 
 });
 
+function login(email, password, callback) {
+
+    const query = 'SELECT id, email, password FROM users WHERE email = ?';
+
+    connection.query(query, [email], function (err, results) {
+        if (err) return callback(err);
+        if (results.length === 0) return callback(new WrongUsernameOrPasswordError(email));
+        const user = results[0];
+
+        bcrypt.compare(password, user.password, function (err, isValid) {
+            if (err || !isValid) return callback(err || new WrongUsernameOrPasswordError(email));
+
+            callback(null, {
+                user_id: user.id.toString(),
+                email: user.email
+            });
+        });
+    });
+}
 app.get("/signin", (req, res) => {
     if (req.session.user) {
         res.send({ loggedIn: true, user: req.session.user })
@@ -103,8 +114,35 @@ app.post("/signin", (req, res) => {
         }
     )
 });
+app.post("/signin", (req, res) => {
+    const company_email = req.body.company_email;
+    const company_password = req.body.company_password;
+    db.query(
+        "SELECT * FROM user_company WHERE company_email = ? AND company_password = ?",
+        [company_email, company_password],
+        (err, result) => {
+            if (err) {
+                res.send({ err: err });
+            }
+            if (result.length > 0) {
+                req.session.user = result;
+                console.log(req.session.user);
+                res.send({ message: "Successfully Signed in" });
 
-app.post("/createpost", (req, res) => {
+            } else {
+                res.send({ message: "WRONG EMAIL/PASSWORD" });
+            }
+        }
+    )
+});
+// app.get("/profileuiser", (req,res)=>{
+//     const 
+// })
+
+
+
+
+app.post("/createpost", async (req, res) => {
     const positionReq = req.body.positionReq;
     const salary = req.body.salary;
     const jobDesc = req.body.jobDesc;
@@ -115,6 +153,16 @@ app.post("/createpost", (req, res) => {
         console.log(result);
     })
 })
+
+app.post("/applypost", async (req, res) => {
+    const reasons = req.body.reasons;
+    const describe = req.body.describe;
+    const sqlInsert = "INSERT INTO applicants (reasons, describe) VALUES (?,?)";
+    db.query(sqlInsert, [reasons, describe], (err, result) => {
+        console.log(result);
+    })
+})
+
 app.get("/explore", (req, res) => {
     const sqlSelect = "SELECT * FROM post";
     db.query(sqlSelect, (err, result) => {

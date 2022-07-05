@@ -1,8 +1,12 @@
 import React from 'react'
 import pc from './pc.png'
+import { useAuth0 } from '@auth0/auth0-react';
 const Home = () => {
+    
     return (
+        
         <>
+        
             <section className="hero">
                 <div className="container">
                     <a href="/explore" className="find-work-button">Find Work</a>
