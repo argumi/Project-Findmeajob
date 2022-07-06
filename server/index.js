@@ -33,10 +33,10 @@ app.use(
 );
 
 const db = mysql.createConnection({
-    host: "localhost",
-    user: "root",
-    password: "",
-    database: "findmeajob",
+    host: "us-cdbr-east-06.cleardb.net",
+    user: "b8e2f6e7660b84",
+    password: "2072aa8f",
+    database: "heroku_7d255f93c1022de",
 });
 
 app.post("/register", (req, res) => {
